@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <interpolation.h>
+#include <vector>
 
 using namespace alglib;
 
@@ -21,7 +22,15 @@ int main(int argc, char **argv)
     //     d2S(+1)/dx^2 = 0.0
     // and see that such spline interpolated f(x) with small error.
     //
-    real_1d_array x = "[-1.0,-0.5,0.0,+0.5,+1.0]";
+    std::vector<double> vec(5,0);
+    vec[0] = -1;
+    vec[1] = -0.5;
+    vec[2] = 0;
+    vec[3] = 0.5;
+    vec[4] = 1.0;
+    real_1d_array x;
+    x.setcontent(vec);
+    // real_1d_array x = "[-1.0,-0.5,0.0,+0.5,+1.0]";
     real_1d_array y = "[+1.0,0.25,0.0,0.25,+1.0]";
     double t = 0.25;
     double v;

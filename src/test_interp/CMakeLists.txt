@@ -6,7 +6,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp)
 find_package(interpolation REQUIRED)
 
 catkin_package(
-  CATKIN_DEPENDS roscpp 
+  CATKIN_DEPENDS roscpp
   DEPENDS interpolation
 )
 
@@ -21,12 +21,3 @@ target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
   interpolation
 )
-
-
-
-
-
-
-
-
-
