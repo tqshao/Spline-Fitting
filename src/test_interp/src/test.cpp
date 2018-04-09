@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "../src/interpolation.h"
+#include <interpolation.h>
 
 using namespace alglib;
 
